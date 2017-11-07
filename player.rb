@@ -1,22 +1,18 @@
 module MathGame
 
   class Player
-    
-    attr_accessor :name, :lives
-    
-    def initialize(name)
-      @name = name
+
+    attr_accessor :lives, :answer
+
+    def initialize
       @lives = 3
+      @answer = 0
     end
-  
-    def wrong
-      @lives -= 1
+
+    def answer
+      @ans = $stdin.gets.chomp.to_i 
     end
-  
-    def lose
-      @lives == 0
-    end
-      
+
   end  
 
 end 
